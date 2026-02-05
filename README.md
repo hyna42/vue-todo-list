@@ -1,6 +1,35 @@
-# vue-todo-list
+# TodoList
 
-This template should help get you started developing with Vue 3 in Vite.
+Cette application est une découverte de Vue.js, mettant en avant les concepts fondamentaux à travers une Todo List interactive et conviviale.
+
+![alt text](./src//assets/image.png)
+
+## Objectif
+
+L'objectif principal est d'explorer les fonctionnalités de Vue.js en créant une application de gestion de tâches. Vous pourrez ajouter, supprimer et marquer des tâches comme complètes, tout en découvrant les bases de la réactivité et de la gestion d'état dans Vue.
+
+## Fonctionnalités
+
+- **Affichage dynamique** : Un message s'affiche si aucune tâche n'est présente.
+- **Ajout de tâches** : Un champ texte et un bouton "Ajouter" permettent de créer de nouvelles tâches facilement.
+- **Gestion des tâches** : Chaque tâche dispose d'une case à cocher pour indiquer son état (faite ou non).
+- **Style visuel** : Les tâches complètes sont barrées grâce à des styles CSS.
+- **Tri des tâches** : Les tâches à faire sont affichées en premier.
+- **Masquage des tâches terminées** : Une case à cocher permet de masquer les tâches déjà complètes.
+
+## Aide
+
+Les tâches auront ce format :
+
+```json
+[
+  {
+    "title": "Tâche à faire",
+    "completed": false,
+    "id": 1020302103
+  }
+]
+```
 
 ## Recommended IDE Setup
 
