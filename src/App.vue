@@ -10,14 +10,14 @@
     <!-- Liste -->
     <div class="todos">
       <p v-if="!todos.length">Add a new task !</p>
-      <ul v-else>
+      <TransitionGroup v-else name="list" tag="ul">
         <li v-for="todo in todoSorted" :key="todo.id">
           <label :for="todo.id" :class="{ done: todo.completed }">
             <input type="checkbox" :id="todo.id" v-model="todo.completed" />
             {{ todo.title }}
           </label>
         </li>
-      </ul>
+      </TransitionGroup>
     </div>
 
     <hr />
@@ -106,5 +106,16 @@ ul > li {
 
 .done {
   text-decoration: line-through;
+}
+
+/* transition */
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.8s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(25px);
 }
 </style>
